@@ -1,24 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import './css/main.css';
+import Home from './page/Home';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import Sidebar from './components/Sidebar';
+import DataTable from './page/DataTable';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Router>
+        <Sidebar />
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/data-to-table">
+            <DataTable />
+          </Route>
+          <Route path="*">
+            <div className="flex h-screen flex-col items-center justify-center">
+              <h1 className="font-semibold text-6xl">404</h1>
+              <Link to="/">
+                <p className="text-primary-blue">Back to Home</p>
+              </Link>
+            </div>
+          </Route>
+        </Switch>
+      </Router>
+    </>
   );
 }
 
