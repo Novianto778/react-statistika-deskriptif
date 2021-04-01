@@ -29,10 +29,12 @@ function renderTable(panjangKelas, jumlahKelas, min, arr) {
   let tabel = [];
   let batasBawah = min;
   let row;
-  for (let i = 0; i < jumlahKelas; i++) {
-    const frekuensi = arr.filter(
-      (x) => x >= batasBawah && x <= batasBawah + panjangKelas - 1
-    );
+  let frekuensi;
+  const array = Array(jumlahKelas).fill(1);
+  array.forEach((a) => {
+    frekuensi = arr.filter((x) => {
+      return x >= batasBawah && x <= batasBawah + panjangKelas - 1;
+    });
     row = (
       <tr>
         <td className="px-6 py-4 whitespace-nowrap">
@@ -43,7 +45,8 @@ function renderTable(panjangKelas, jumlahKelas, min, arr) {
     );
     tabel.push(row);
     batasBawah += panjangKelas;
-  }
+  });
+
   const dataTable = (
     <table className="min-w-full divide-y divide-gray-200">
       <thead className="bg-gray-50">
