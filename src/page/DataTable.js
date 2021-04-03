@@ -4,7 +4,6 @@ import * as Yup from 'yup';
 import FormikControl from '../components/FormikControl';
 import Button from '../components/Button';
 import Accordion from '../components/Accordion';
-import Table from '../components/Table';
 
 const DataTable = () => {
   const [formValue, setFormValue] = useState(null);
@@ -46,7 +45,7 @@ const DataTable = () => {
               name="data"
               label="Masukkan Data Angka:"
               rows="5"
-              className="block w-full border-primary-blue border-2 rounded-md p-2"
+              className="block md:w-10/12 w-full border-primary-blue border-2 rounded-md p-2"
             />
             <FormikControl
               control="radio"

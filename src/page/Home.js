@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const Home = () => {
   return (
     <>
-      <div className="flex flex-wrap mt-16 mt-0 md:w-11/12 w-full md:ml-auto justify-evenly">
+      <div className="flex flex-wrap mt-16 md:w-11/12 w-full md:ml-auto justify-evenly">
         {cardContent.map((card) => (
           <Link to={card.url} key={card.id}>
             <Card data={card} />
