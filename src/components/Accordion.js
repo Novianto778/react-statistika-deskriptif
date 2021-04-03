@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Mean from './Mean';
 import Median from './Median';
 import Modus from './Modus';
+import Table from './Table';
 
 const Accordion = ({ children, title, data }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -48,6 +49,8 @@ const Accordion = ({ children, title, data }) => {
         return <Modus data={data} />;
       case 'Median':
         return <Median data={data} />;
+      case 'Table':
+        return <Table data={data} />;
       default:
         return null;
     }

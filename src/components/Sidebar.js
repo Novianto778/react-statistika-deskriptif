@@ -100,7 +100,7 @@ const Sidebar = () => {
   ];
 
   return (
-    <div className="md:h-screen h-16 w-full md:w-1/12 bg-gray-900 text-white flex flex-row md:flex-col items-center justify-evenly fixed md:top-0 bottom-0">
+    <div className="md:h-screen h-16 w-full md:w-20 bg-gray-900 text-white flex flex-row md:flex-col items-center justify-evenly fixed md:top-0 bottom-0">
       {tabMenu.map((menu, idx) => {
         return (
           <Link to={menu.url} key={idx}>

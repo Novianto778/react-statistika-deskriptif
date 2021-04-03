@@ -8,7 +8,7 @@ const Icon = ({ svg, text, className }) => {
   return (
     <div className={classNames.join('')}>
       {svg}
-      <p className="tooltiptext">{text}</p>
+      <p className="tooltiptext hidden md:block">{text}</p>
     </div>
   );
 };

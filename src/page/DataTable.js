@@ -67,7 +67,7 @@ const DataTable = () => {
           <Accordion title="Mean" data={formValue} />
           <Accordion title="Modus" data={formValue} />
           <Accordion title="Median" data={formValue} />
-          <Table data={formValue} />
+          <Accordion title="Table" data={formValue} />
         </>
       )}
     </div>

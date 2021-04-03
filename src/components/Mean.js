@@ -15,7 +15,7 @@ const Mean = ({ data }) => {
       <div className="mb-4">
         <h2 className="font-medium text-lg">Mencari Mean:</h2>
         <p>
-          Mean = {totalData} / {length} = {totalData / length}
+          Mean = {totalData} / {length} = {(totalData / length).toFixed(2)}
         </p>
       </div>
     </>
