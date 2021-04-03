@@ -57,7 +57,7 @@ const Accordion = ({ children, title, data }) => {
   };
 
   return (
-    <div className="w-9/12">
+    <div className="md:w-9/12 w-full">
       <div
         className="flex bg-white shadow border-b-2 border-gray-200 p-4 rounded-md items-center justify-between"
         onClick={() => setIsOpen((c) => !c)}

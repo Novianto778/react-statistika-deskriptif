@@ -30,7 +30,7 @@ const DataTable = () => {
   };
 
   return (
-    <div className="w-10/12 ml-auto my-8">
+    <div className="md:w-10/12 md:ml-auto w-full my-8 px-8">
       <h1 className="font-semibold text-4xl text-primary-blue mb-8">
         Data to Table
       </h1>
@@ -46,7 +46,7 @@ const DataTable = () => {
               name="data"
               label="Masukkan Data Angka:"
               rows="5"
-              className="block w-10/12 border-primary-blue border-2 rounded-md p-2"
+              className="block w-full border-primary-blue border-2 rounded-md p-2"
             />
             <FormikControl
               control="radio"
